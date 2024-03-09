@@ -5,6 +5,21 @@ $primary-text-color: #7c6a0a;
 $orange-color: #fa9500;
 $font-stack: "IBM Plex Sans", sans-serif;
 
+@mixin flexCenter($direction, $content, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $align;
+}
+
+@mixin buttonStyle {
+  button {
+    background: none;
+    border-style: none;
+    cursor: pointer;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,8 +33,7 @@ body {
 
 nav {
   width: auto;
-  display: flex;
-  justify-content: space-between;
+  @include flexCenter(row, space-between, center);
   color: $primary-text-color;
   padding: 15px;
   p {
@@ -29,18 +43,13 @@ nav {
   .icons {
     display: flex;
     gap: 15px;
-    button {
-      background: none;
-      border-style: none;
-      cursor: pointer;
-    }
+    @include buttonStyle;
   }
 }
 
 article {
+  @include flexCenter(row, space-between, center);
   width: auto;
-  display: flex;
-  justify-content: space-between;
   color: $primary-text-color;
   padding-left: 45px;
   padding-right: 45px;
@@ -51,21 +60,19 @@ article {
   p {
     font-size: 1.5em;
   }
+  @include buttonStyle;
   button {
     width: 12vw;
     padding: 20px;
     background-color: $orange-color;
-    border-style: none;
     border-radius: 35px;
     font-size: 1.2em;
     color: white;
   }
   .impact-section {
+    @include flexCenter(column, space-evenly, flex-start);
     width: 50%;
-    display: flex;
-    flex-direction: column;
     gap: 40px;
-    padding-top: 50px;
     p {
       width: 70%;
       margin-top: 20px;
@@ -93,12 +100,10 @@ section {
       padding-bottom: 60px;
     }
     .card-section {
-      display: flex;
+      @include flexCenter(row, space-evenly, center);
       width: auto;
       height: auto;
-      justify-content: center;
       flex-wrap: wrap;
-      align-items: center;
       column-gap: 200px;
       row-gap: 80px;
     }
