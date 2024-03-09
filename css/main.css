@@ -89,11 +89,11 @@ section .healthcare h2, section .furniture h2 {
 }
 section .healthcare .card-section, section .furniture .card-section {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: auto;
   height: auto;
+  justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
   -moz-column-gap: 200px;
        column-gap: 200px;
   row-gap: 80px;
@@ -103,8 +103,8 @@ section .healthcare .product-card, section .furniture .product-card {
   height: 45vh;
   background-color: #ffdac6;
   color: #7c6a0a;
-  border-radius: 8px;
   padding: 20px;
+  border-radius: 8px;
 }
 section .healthcare .product-card .icon, section .furniture .product-card .icon {
   width: 100%;

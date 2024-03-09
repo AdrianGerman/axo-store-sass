@@ -94,11 +94,11 @@ section {
     }
     .card-section {
       display: flex;
-      justify-content: center;
-      align-items: center;
       width: auto;
       height: auto;
+      justify-content: center;
       flex-wrap: wrap;
+      align-items: center;
       column-gap: 200px;
       row-gap: 80px;
     }
@@ -107,8 +107,8 @@ section {
       height: 45vh;
       background-color: $secondary-color;
       color: $primary-text-color;
-      border-radius: 8px;
       padding: 20px;
+      border-radius: 8px;
       .icon {
         width: 100%;
         display: flex;
