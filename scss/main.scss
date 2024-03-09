@@ -68,6 +68,11 @@ article {
     border-radius: 35px;
     font-size: 1.2em;
     color: white;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
   }
   .impact-section {
     @include flexCenter(column, space-evenly, flex-start);
@@ -154,7 +159,7 @@ section {
     font-weight: bold;
     padding-bottom: 60px;
   }
-  .mision-section {
+  .mission-section {
     @include flexCenter(row, space-evenly, center);
     .earth {
       width: 30vw;
@@ -174,6 +179,28 @@ section {
   }
   .innovation {
     @extend .earth;
+  }
+}
+
+.gallery {
+  h2 {
+    font-weight: bold;
+    padding-bottom: 60px;
+  }
+  .gallery-images {
+    @include flexCenter(row, space-between, center);
+    img {
+      width: 28vw;
+      height: 45vh;
+      object-fit: cover;
+      object-position: 5px 35%;
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+    }
   }
 }
 
