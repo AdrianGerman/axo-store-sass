@@ -204,6 +204,31 @@ section .furniture .product-card {
   transition: transform 0.3s ease;
 }
 
+.location {
+  color: #fa9500;
+}
+.location h2 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.location .map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.location .map img {
+  border-radius: 30px;
+}
+.location h3 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+.location p {
+  font-size: 1.5rem;
+}
+
 footer {
   background-color: #fa9500;
   width: 100%;
